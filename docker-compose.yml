@@ -7,6 +7,7 @@ elasticsearch:
 logstash:
   command: "logstash -f /opt/logstash/server/etc/conf.d/"
   image: docker-logstash:latest
+# 아래와 같이 volumes 를 지정해주면 compose로 실행을 하면서 logstash의 config설정을 넣어줄 수 도 있습니다.
 #  volumes:
 #    - ./logstash/config:/opt/logstash/server/etc/conf.d/
   ports:
